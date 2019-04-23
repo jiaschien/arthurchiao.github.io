@@ -94,6 +94,45 @@ Peer           AS     Up/Down State       |#Received  Accepted
 192.168.255.2 65342 1d 18:28:07 Establ      |        0         0
 ```
 
+Neighbor details:
+
+```shell
+$ gobgp neighbor 192.168.255.1
+BGP neighbor is 192.168.255.1, remote AS 65342
+  BGP version 4, remote router ID 192.168.255.1
+  BGP state = established, up for 1d 18:55:34
+  BGP OutQ = 0, Flops = 0
+  Hold time is 90, keepalive interval is 30 seconds
+  Configured hold time is 90, keepalive interval is 30 seconds
+
+  Neighbor capabilities:
+    multiprotocol:
+        ipv4-unicast:   advertised and received
+    route-refresh:      advertised and received
+    extended-nexthop:   received
+        Remote: nlri: ipv4-unicast, nexthop: ipv6
+    graceful-restart:   received
+        Remote: restart time 120 sec
+            ipv4-unicast
+    4-octet-as: advertised and received
+    UnknownCapability(66):      received
+    UnknownCapability(67):      received
+    cisco-route-refresh:        received
+  Message statistics:
+                         Sent       Rcvd
+    Opens:                  1          1
+    Notifications:          0          0
+    Updates:              517          1
+    Keepalives:          5152       5150
+    Route Refresh:          0          1
+    Discarded:              0          0
+    Total:               5670       5153
+  Route statistics:
+    Advertised:             1
+    Received:               0
+    Accepted:               0
+```
+
 ## 6 Policy
 
 ```shell
